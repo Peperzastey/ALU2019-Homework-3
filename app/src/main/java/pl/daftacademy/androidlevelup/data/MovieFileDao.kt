@@ -12,4 +12,8 @@ class MovieFileDao(private val context: Context) : MovieDao {
         InputStreamReader(context.assets.open("movies.json"))
             .let { Gson().fromJson(it, MoviesPage::class.java) }
             .movies
+
+    override fun getMovies(category: String) =
+        getAllMovies().filter { category in it.genres } //TODO case-insensitive
+                                                        //TODO constants?
 }

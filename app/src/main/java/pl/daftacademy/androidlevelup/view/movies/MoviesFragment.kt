@@ -17,10 +17,27 @@ class MoviesFragment : Fragment() {
     private val adapter = MoviesAdapter()
 
     override fun onCreateView(inflater: LayoutInflater, container: ViewGroup?, savedInstanceState: Bundle?): View? =
-            inflater.inflate(R.layout.fragment_movies, container, false)
+        inflater.inflate(R.layout.fragment_movies, container, false)
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         recyclerView.adapter = adapter
-        adapter.items = viewModel.getMovies()
+        val categoryFilter = arguments?.getString(CATEGORY_EXTRA)
+        if (categoryFilter == null)
+            adapter.items = viewModel.getMovies()
+        else
+            adapter.items = viewModel.getMoviesByCategory(categoryFilter)
+    }
+
+    companion object {
+        const val CATEGORY_EXTRA = "CATEGORY_EXTRA"
+
+        fun create(categoryFilter: String? = null): MoviesFragment {
+            val fragment = MoviesFragment()
+            val args = Bundle()
+            args.putString(CATEGORY_EXTRA, categoryFilter)
+            // null - the same as no mapping at all
+            fragment.arguments = args
+            return fragment
+        }
     }
 }

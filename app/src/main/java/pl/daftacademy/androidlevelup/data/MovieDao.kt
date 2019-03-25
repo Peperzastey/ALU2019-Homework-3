@@ -5,4 +5,5 @@ import pl.daftacademy.androidlevelup.entity.Movie
 interface MovieDao {
 
     fun getAllMovies(): List<Movie>
+    fun getMovies(category: String): List<Movie>
 }

@@ -1,0 +1,28 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/category_all_movies"
+        android:icon="@drawable/ic_movies"
+        android:title="@string/menu_all_movies"
+        android:checked="true"/>
+    <item
+        android:id="@+id/category_action_movies"
+        android:icon="@drawable/ic_action"
+        android:title="@string/menu_action_movies"/>
+    <item
+        android:id="@+id/category_comedy_movies"
+        android:icon="@drawable/ic_comedy"
+        android:title="@string/menu_comedy_movies"/>
+    <item
+        android:id="@+id/category_crime_movies"
+        android:icon="@drawable/ic_crime"
+        android:title="@string/menu_crime_movies"/>
+    <item
+        android:id="@+id/category_horror_movies"
+        android:icon="@drawable/ic_horror"
+        android:title="@string/menu_horror_movies"/>
+    <item
+        android:id="@+id/category_romance_movies"
+        android:icon="@drawable/ic_romance"
+        android:title="@string/menu_romance_movies"/>
+</menu>

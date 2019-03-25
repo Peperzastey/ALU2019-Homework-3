@@ -1,3 +1,10 @@
 <resources>
-    <string name="app_name">Android LevelUp</string>
+    <string name="app_name">ALU Homework3</string>
+
+    <string name="menu_all_movies">All Movies</string>
+    <string name="menu_action_movies">Action</string>
+    <string name="menu_comedy_movies">Comedy</string>
+    <string name="menu_crime_movies">Crime</string>
+    <string name="menu_horror_movies">Horror</string>
+    <string name="menu_romance_movies">Romance</string>
 </resources>

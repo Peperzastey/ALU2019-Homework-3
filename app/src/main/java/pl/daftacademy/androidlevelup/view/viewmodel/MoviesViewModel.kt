@@ -9,4 +9,5 @@ class MoviesViewModel(application: Application): AndroidViewModel(application) {
     private val movieDao: MovieDao = MovieFileDao(getApplication())
 
     fun getMovies() = movieDao.getAllMovies()
+    fun getMoviesByCategory(category: String) = movieDao.getMovies(category)
 }
