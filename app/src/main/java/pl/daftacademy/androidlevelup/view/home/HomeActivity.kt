@@ -34,8 +34,8 @@ class HomeActivity : AppCompatActivity() {
         HORROR_MOVIES = getString(R.string.menu_horror_movies)
         ROMANCE_MOVIES = getString(R.string.menu_romance_movies)
 
-        nav.setNavigationItemSelectedListener { changeFilter(it) }   // [this] ::changeFilter ?
-        if (savedInstanceState == null) filterByCategory("All Movies")
+        nav.setNavigationItemSelectedListener { changeFilter(it) }
+        if (savedInstanceState == null) filterByCategory(ALL_MOVIES)
     }
 
     override fun onOptionsItemSelected(item: MenuItem) =
@@ -48,7 +48,6 @@ class HomeActivity : AppCompatActivity() {
         }
 
     private fun changeFilter(item: MenuItem): Boolean {
-        //check Kotlin function: TODO("Implement")
         when (item.itemId) {
             R.id.category_all_movies -> filterByCategory(ALL_MOVIES)
             R.id.category_action_movies -> filterByCategory(ACTION_MOVIES)
@@ -76,7 +75,6 @@ class HomeActivity : AppCompatActivity() {
     }
 
     private fun updateActionBarTitle(title: CharSequence) {
-        supportActionBar?.title = title //check null = title ??
-        //TODO check without toolbar in layout
+        supportActionBar?.title = title
     }
 }
